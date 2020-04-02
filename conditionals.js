@@ -21,8 +21,8 @@
     otherwise return "red";
 */
 function getColor(number) {
-    
-    return  ( number > 10 ) ?  "blue"  :  "red" ;
+
+    return (number > 10) ? "blue" : "red";
 }
 
 /* 
@@ -50,7 +50,7 @@ console.log(getColor(10) === "red");
     if the brightness is greater than or equal to 200, then return "on"
 */
 function lightStatus(brightness) {
-    return (brightness > 0) ? "dimmed" : (brightness >= 200) ? "on" : "off";
+    return brightness === 0 ? "off" : brightness < 200 ? "dimmed" : "on";
 }
 
 /* 
@@ -87,14 +87,33 @@ console.log(lightStatus(255) === "on");
 
 function getLightBulbStatusDisplayString(status) {
     let result = "";
-    /* uncomment and complete
-    switch( your code here ) {
-      case "your code here": 
-        your code here;
-        break;
-      etc...
+    switch (status) {
+        case "on":
+            result = "The house is bright!";
+            break;
+        case "dimmed":
+            result = "The house is nice and dim";
+            break;
+        case "deleted":
+            result = "The lightbulb has been removed from the system";
+            break;
+        case "off":
+            result = "The house is dark";
+            break;
+        case "broken":
+            result = "The house is dark and we can't turn the light on!"
+            break;
+        case ("offline" || "missing"):
+            result = "The house is dark and we can't find the lightbulb!";
+            break;
+        default:
+            result = "Something is wrong!";
+            break; 
+       
+
+
     }
-    */
+
     return result;
 }
 
