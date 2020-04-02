@@ -21,8 +21,8 @@
     otherwise return "red";
 */
 function getColor(number) {
-    // Uncomment and complete
-    return /* ( Your code Here ) ?  Your code Here  :  Your code Here */;
+    
+    return  ( number > 10 ) ?  "blue"  :  "red" ;
 }
 
 /* 
@@ -50,7 +50,7 @@ console.log(getColor(10) === "red");
     if the brightness is greater than or equal to 200, then return "on"
 */
 function lightStatus(brightness) {
-    return /* Put both ternary statements here, in one line */;
+    return (brightness > 0) ? "dimmed" : (brightness >= 200) ? "on" : "off";
 }
 
 /* 
