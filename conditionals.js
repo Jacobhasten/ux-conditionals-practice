@@ -103,7 +103,8 @@ function getLightBulbStatusDisplayString(status) {
         case "broken":
             result = "The house is dark and we can't turn the light on!"
             break;
-        case ("offline" || "missing"):
+        case "offline":
+        case "missing":
             result = "The house is dark and we can't find the lightbulb!";
             break;
         default:
